@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/Header/Header';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "O Jeux de Société",
-  description: "Découvrez, partagez et jouez !",
+  title: 'O Jeux de Société',
+  description: 'Découvrez, partagez et jouez !',
 };
 
 export default function RootLayout({
@@ -15,8 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />{children}</body>
     </html>
   );
 }
