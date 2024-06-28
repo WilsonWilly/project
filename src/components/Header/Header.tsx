@@ -1,22 +1,20 @@
-import  Image from 'next/image';
-import Logo from '/var/www/html/projet-2-o-jeux-de-societe-front/public/asset/images/logo-main-ojds.png';
-import StarPenguin from '/asset/images/penguin-note.png';
+import Image from 'next/image';
 
 function Header() {
   return (
-    <header className="flex justify-between items-center p-5 ">
+    <header className="flex justify-between items-center p-5 bg-black text-white">
       <div>
-
         <Image 
-            src='/image/logo-main-ojds.png'
+            src="/images/logo.png"
             alt="Logo du site"
             width={80}
             height={80}
-            />
-        <div> titre de la page </div>
+            priority
+        />
+        <div>titre de la page</div>
       </div>
-      <div>
-        <div className="">se connecter</div>
+      <div className="text-right">
+        <div>se connecter</div>
         <div>Si admin</div>
       </div>
     </header>
