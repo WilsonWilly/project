@@ -1,5 +1,6 @@
-I installed the initial toolkit 
-# Création du projet
+# installed the initial toolkit
+
+## Création du projet
 
 ## Liste des actions effectuées
 
