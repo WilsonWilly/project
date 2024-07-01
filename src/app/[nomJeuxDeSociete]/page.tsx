@@ -1,11 +1,13 @@
-import Image from 'next/image';
+import { Image } from '@nextui-org/react';
 
 import { detailsGame } from '../../assets/detailsGame';
+import { Button } from '@nextui-org/react';
+import { Heart, PlusSquare } from 'react-feather';
 
 export default function BoardGame() {
   console.log(detailsGame);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 text-black ">
+    <main className="flex h-screen w-screen flex-col items-center justify-center p-2 text-black ">
       <section className="w-full flex justify-between mb-1">
         <div className="w-1/2 text-center bg-orange-300 py-2">
           {detailsGame.game.name}
@@ -14,17 +16,27 @@ export default function BoardGame() {
           {detailsGame.game.rating}
         </div>
       </section>
-      <div className="w-full bg-orange-300 py-4 text-center mb-1">
-        {detailsGame.game.picture}
-      </div>
+      <Image
+        alt="Boardgame cover"
+        className="z-0 w-full h-full object-cover p-2"
+        src={detailsGame.game.picture}
+        width="75vh"
+        height={100}
+      />
+
       <section className="w-full bg-orange-300 py-8 text-center mb-4">
-        {detailsGame.game.description}
+        <p>{detailsGame.game.description} </p>
+        <p>Difficulté : {detailsGame.game.difficulty}</p>
       </section>
       <section className="w-full flex flex-col items-center space-y-4">
         <div className="w-full flex justify-around space-x-4">
-          <button className="bg-orange-300 p-2">
-            AJOUTER A MA BIBLIOTHEQUE
-          </button>
+          <Button
+            className="p-2 bg-orange-300"
+            color="success"
+            endContent={<PlusSquare />}
+          >
+            Ajouter à ma bibliothéque
+          </Button>
           <button className="bg-orange-300 p-2">
             AJOUTER UN JEU A MA LISTE
           </button>
