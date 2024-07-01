@@ -1,5 +1,5 @@
 import React from 'react';
-
+/*
 type SearchIconType = {
   size: number;
   strokeWidth: number;
@@ -7,13 +7,15 @@ type SearchIconType = {
   height: number;
   props: any;
 };
+
+ */
 const SearchIcon = ({
   size = 24,
   strokeWidth = 1.5,
   width,
   height,
   ...props
-}: SearchIconType) => (
+}: any) => (
   <svg
     aria-hidden="true"
     fill="none"

@@ -1,20 +1,32 @@
 import Image from 'next/image';
+import React from 'react';
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Input,
+  DropdownItem,
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
+  Avatar,
+} from '@nextui-org/react';
+import SearchIcon from '@/components/SearchIcon';
 
-import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
-
-
-
-const AppLogo = ()=>{
-return <Image
-  src="/images/logo.png"
-  alt="Logo du site"
-  width={80}
-  height={80}
-  priority
-/>
-}
- const Header = ()=> {
+const AppLogo = () => {
+  return (
+    <Image
+      src="/images/logo.png"
+      alt="Logo du site"
+      width={80}
+      height={80}
+      priority
+    />
+  );
+};
+const Header = () => {
   return (
     <Navbar isBordered>
       <NavbarContent justify="start">
@@ -24,16 +36,19 @@ return <Image
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-3">
           <NavbarItem>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link color="foreground" href="#">
               Features
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link href="#" aria-current="page" color="secondary">
               Customers
             </Link>
           </NavbarItem>
           <NavbarItem>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link color="foreground" href="#">
               Integrations
             </Link>
@@ -44,10 +59,11 @@ return <Image
       <NavbarContent as="div" className="items-center" justify="end">
         <Input
           classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10",
-            mainWrapper: "h-full",
-            input: "text-small",
-            inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+            base: 'max-w-full sm:max-w-[10rem] h-10',
+            mainWrapper: 'h-full',
+            input: 'text-small',
+            inputWrapper:
+              'h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20',
           }}
           placeholder="Type to search..."
           size="sm"
@@ -85,11 +101,10 @@ return <Image
       </NavbarContent>
     </Navbar>
   );
-}
+};
 
-
-
-{/*
+{
+  /*
 function Header() {
   return (
     <header className="flex justify-between items-center p-5 bg-black text-white">
@@ -111,6 +126,7 @@ function Header() {
   );
 }
 
-*/}
+*/
+}
 
 export default Header;
