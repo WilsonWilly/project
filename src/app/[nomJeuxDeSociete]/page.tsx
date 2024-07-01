@@ -31,9 +31,9 @@ export default function BoardGame() {
       <section className="w-full flex flex-col items-center space-y-4">
         <div className="w-full flex justify-around space-x-4">
           <Button
-            className="p-2 bg-orange-300"
-            color="success"
-            endContent={<PlusSquare />}
+            className="p-2 bg-orange-300 flex items-center space-x-2"
+            radius="sm"
+            startContent={<PlusSquare className="w-18 h-18" />}
           >
             Ajouter à ma bibliothéque
           </Button>
