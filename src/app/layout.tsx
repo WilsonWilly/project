@@ -23,6 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="fr">
       <body className={adventureFont.className}>
         <div className="md:container md:mx-auto md:w-[85%] containerMain">
