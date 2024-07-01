@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={adventureFont.className}>
-        <div className="md:container md:mx-auto md:p-6 md:w-[80%] containerMain">
+        <div className="md:container md:mx-auto md:w-[85%] containerMain">
           <Header />
           {children}
         </div>
