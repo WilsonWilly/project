@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 const adventureFont = localFont({
   src: '../assets/fonts/adventure/Adventure.otf',
 });
+const adventureFontHollow = localFont({
+  src: '../assets/fonts/adventure/Adventure-Hollow.otf',
+});
 
 export const metadata: Metadata = {
   title: 'O Jeux de Société',
@@ -22,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={adventureFont.className}>
-        <Header />
-        {children}
+        <div className="md:container md:m-auto md:p-4">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
