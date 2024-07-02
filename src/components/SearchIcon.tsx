@@ -10,7 +10,7 @@ type SearchIconType = {
 
  */
 const SearchIcon = ({
-  size = 24,
+  size = 20000,
   strokeWidth = 1.5,
   width,
   height,
